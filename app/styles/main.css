@@ -1,0 +1,15 @@
+@import url('./normalize.css');
+@import url('./reset.css');
+
+:root {
+  --c-white: hsl(340, 9%, 94%);
+  --c-white--d: hsl(340, 9%, 90%);
+  --c-white--ds: hsl(340, 9%, 85%);
+  --c-red: hsl(356, 86%, 58%);
+  --c-red--d: hsl(356, 86%, 48%);
+  --c-red--ds: hsl(356, 86%, 38%);
+  --c-black: hsl(260, 14%, 4%);
+  --c-black--l: hsl(260, 14%, 14%);
+  --c-black--ls: hsl(260, 14%, 24%);
+}
+
