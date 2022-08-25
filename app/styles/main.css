@@ -2,14 +2,24 @@
 @import url('./reset.css');
 
 :root {
-  --c-white: hsl(340, 9%, 94%);
-  --c-white--d: hsl(340, 9%, 90%);
-  --c-white--ds: hsl(340, 9%, 85%);
-  --c-red: hsl(356, 86%, 58%);
-  --c-red--d: hsl(356, 86%, 48%);
-  --c-red--ds: hsl(356, 86%, 38%);
-  --c-black: hsl(260, 14%, 4%);
-  --c-black--l: hsl(260, 14%, 14%);
-  --c-black--ls: hsl(260, 14%, 24%);
+  --c-white: #f1eeef;
+  --c-white--d: #e8e3e5;
+  --c-white--ds: #dcd5d8;
+  --c-red: #f03844;
+  --c-red--d: #e4111f;
+  --c-red--ds: #b40e19;
+  --c-black: #0a090c;
+  --c-black--l: #221f29;
+  --c-black--ls: #3a3546;
+  --c-gray: #6d6779;
+  --c-gray--l: #868093;
+  --c-gray--ls: #a09cab;
 }
 
+body * {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: var(--c-white);
+}
