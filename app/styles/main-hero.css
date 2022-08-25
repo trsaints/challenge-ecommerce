@@ -1,0 +1,31 @@
+.main__hero {
+  padding: 1rem;
+  padding-top: 4.875rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4), rgba(0,0,0,0.8)) 100%, url('../assets/images/hero_banner_medium.svg') no-repeat center / cover;
+  color: var(--c-white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: .5rem;
+}
+
+.hero__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.hero__description {
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.hero__link {
+  display: inline-block;
+  padding: .875rem 1rem;
+  font-weight: 600;
+  font-size: .875rem;
+  background-color: var(--c-red);
+  max-width: 9rem;
+  text-align: center;
+}
