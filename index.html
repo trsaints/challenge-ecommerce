@@ -23,7 +23,13 @@
         alt=""
       />
 
-      <input class="header__search" type="search" name="" id="" placeholder="O que deseja encontrar?" />
+      <input
+        class="header__search"
+        type="search"
+        name=""
+        id=""
+        placeholder="O que deseja encontrar?"
+      />
 
       <a class="header__login" href="#">Login</a>
     </header>
@@ -40,8 +46,11 @@
       </header>
 
       <section class="main__products">
-        <section class="products__geeks">
-          <h2>Star wars</h2>
+        <section class="main__products--geeks">
+          <header class="products__header">
+            <h2 class="products__header title">Star wars</h2>
+            <a href="#" class="products__header link">Ver todos</a>
+          </header>
 
           <ul class="products__list">
             <li class="products__item">
@@ -60,8 +69,11 @@
           </ul>
         </section>
 
-        <section class="products__consoles">
-          <h2>Consoles</h2>
+        <section class="main__products--consoles">
+          <header class="products__header">
+            <h2 class="products__header title">Consoles</h2>
+            <a href="#" class="products__header link">Ver todos</a>
+          </header>
 
           <ul class="products__list">
             <li class="products__item">
@@ -80,8 +92,11 @@
           </ul>
         </section>
 
-        <section class="products__miscelaneous">
-          <h2>Diversos</h2>
+        <section class="main__products--miscelaneous">
+          <header class="products__header">
+            <h2 class="products__header title">Diversos</h2>
+            <a href="#" class="products__header link">Ver todos</a>
+          </header>
 
           <ul class="products__list">
             <li class="products__item">
@@ -140,19 +155,38 @@
         <fieldset class="contact__fieldset">
           <legend class="contact__legend">Fale conosco</legend>
 
-          <label class="fieldset__section">Nome <input type="text" class="section__input"></label>
-          <label class="fieldset__section">Mensagem
-            <textarea name="" cols="30" rows="10" class="section__textarea"></textarea>
+          <label class="fieldset__section"
+            >Nome <input type="text" class="section__input"
+          /></label>
+          <label class="fieldset__section"
+            >Mensagem
+            <textarea
+              name=""
+              cols="30"
+              rows="10"
+              class="section__textarea"
+            ></textarea>
           </label>
 
-          <input class="fieldset__submit" type="submit" value="Enviar mensagem">
+          <input
+            class="fieldset__submit"
+            type="submit"
+            value="Enviar mensagem"
+          />
         </fieldset>
       </form>
     </aside>
 
     <footer class="footer">
-      <p>Desenvolvido por <a href="https://github.com/trsaints/challenge-ecommerce/" class="footer__link">@trsaints</a><br>
-      2022</p>
+      <p>
+        Desenvolvido por
+        <a
+          href="https://github.com/trsaints/challenge-ecommerce/"
+          class="footer__link"
+          >@trsaints</a
+        ><br />
+        2022
+      </p>
     </footer>
 
     <script src="./app/src/index.js" type="module"></script>
