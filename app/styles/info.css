@@ -19,8 +19,11 @@
   font-weight: 500;
 }
 
+.navigation__link:first-of-type {
+  align-self: center;
+}
+
 .info__logo {
-  margin-inline: auto;
   min-width: 11rem;
 }
 
@@ -37,6 +40,10 @@
 
   .navigation__list {
     gap: 1.5rem;
+  }
+
+  .navigation__link:first-of-type {
+    align-self: flex-start;
   }
 }
 
