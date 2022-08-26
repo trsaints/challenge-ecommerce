@@ -26,6 +26,22 @@
   font-weight: 600;
   font-size: .875rem;
   background-color: var(--c-red);
-  max-width: 9rem;
+  max-width: 7.4375rem;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .main__hero {
+    padding: 2rem;
+    padding-top: 10.0625rem;
+    gap: 1rem;
+  }
+
+  .hero__title {
+    font-size: 3.25rem;
+  }
+
+  .hero__description {
+    font-size: 1.375rem;
+  }
 }
