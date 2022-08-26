@@ -3,8 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./app/assets/icons/brands.min.css" />
-    <link rel="stylesheet" href="./app/assets/icons/solid.min.css" />
+    <link
+      rel="stylesheet"
+      href="./app/assets/icons/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./app/assets/icons/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./app/assets/icons/css/solid.min.css"
+    />
     <link rel="stylesheet" href="./app/styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,13 +33,17 @@
         alt=""
       />
 
-      <input
-        class="header__search"
-        type="search"
-        name=""
-        id=""
-        placeholder="O que deseja encontrar?"
-      />
+      <label class="header__label">
+        <input
+          class="header__search"
+          type="search"
+          name=""
+          id=""
+          placeholder="O que deseja encontrar?"
+        />
+
+        <i class="fa-solid fa-magnifying-glass label__icon"></i>
+      </label>
 
       <a class="header__login" href="#">Login</a>
     </header>
