@@ -8,13 +8,20 @@
 
 .header__logo {
   display: inline-block;
+  min-width: 6.25rem;
+  order: 1;
 }
 
 .header__label {
+  order: 3;
+  width: 0;
+  overflow: hidden;
+}
+
+.header__label.expanded {
   padding: .5rem 1rem;
   background-color: var(--c-white);
   border-radius: 1.25rem;
-  width: 100%;
 }
 
 .header__search::placeholder {
@@ -24,6 +31,9 @@
 
 .label__icon {
   color: var(--c-red--ds);
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  position: absolute;
 }
 
 .header__login {
@@ -33,6 +43,7 @@
   border: .0625rem solid var(--c-red);
   display: inline-block;
   padding: .6rem 3rem;
+  order: 2;
 }
 
 @media screen and (min-width: 768px) {
@@ -45,12 +56,26 @@
   }
 
   .header__label {
+    padding: .5rem 1rem;
+    background-color: var(--c-white);
+    border-radius: 1.25rem;
+    width: 100%;  
     margin-right: 8.375rem;
     padding: .75rem 1rem;
+    order: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .label__icon {
+    position: relative;
   }
 
   .header__login {
     padding: .875rem 4rem;
+    order: 3;
   }
 }
 
