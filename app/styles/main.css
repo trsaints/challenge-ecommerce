@@ -4,6 +4,7 @@
 @import url('./main-hero.css');
 @import url('./main-products.css');
 @import url('./info.css');
+@import url('./info-contact.css');
 
 :root {
   --c-white: #f1eeef;
