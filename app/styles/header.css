@@ -14,6 +14,7 @@
   padding: .5rem 1rem;
   background-color: var(--c-white);
   border-radius: 1.25rem;
+  width: 100%;
 }
 
 .header__search::placeholder {
@@ -50,5 +51,15 @@
 
   .header__login {
     padding: .875rem 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 2rem 9.5rem;
+  }
+
+  .header__label {
+    margin-right: 22.0625rem;
   }
 }
