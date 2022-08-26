@@ -57,3 +57,20 @@
     padding: 2rem;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .main__products {
+    padding: 4rem 9.5rem;
+    gap: 4rem;
+  }
+
+  .main__products--geeks,
+  .main__products--consoles,
+  .main__products--miscelaneous {
+    padding: 0;
+  }
+
+  .products__header.title {
+    font-size: 2rem;
+  }
+}
