@@ -39,3 +39,13 @@
   color: var(--c-white);
   max-width: 9.4375rem;
 }
+
+@media screen and (min-width: 768px) {
+  .info__contact {
+    width: 100%;
+  }
+
+  .contact__fieldset {
+    gap: 1rem;
+  }
+}
