@@ -45,3 +45,14 @@
     font-size: 1.375rem;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .main__hero {
+    padding-top: 9.375rem;
+    padding-inline: 9.5rem;
+  }
+
+  .hero__link {
+    max-width: 8.125rem;
+  }
+}
