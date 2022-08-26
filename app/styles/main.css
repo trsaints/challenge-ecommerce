@@ -3,6 +3,7 @@
 @import url('./header.css');
 @import url('./main-hero.css');
 @import url('./main-products.css');
+@import url('./info.css');
 
 :root {
   --c-white: #f1eeef;
