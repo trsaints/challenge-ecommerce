@@ -5,6 +5,7 @@
 @import url('./main-products.css');
 @import url('./info.css');
 @import url('./info-contact.css');
+@import url('./footer.css');
 
 :root {
   --c-white: #f1eeef;
