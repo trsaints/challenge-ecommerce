@@ -29,3 +29,7 @@ body * {
 body {
   background-color: var(--c-white);
 }
+
+img, video {
+  max-width: 100%;
+}
