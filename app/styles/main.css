@@ -30,6 +30,6 @@ body {
   background-color: var(--c-white);
 }
 
-img, video {
+img, video, input, textarea {
   max-width: 100%;
 }
