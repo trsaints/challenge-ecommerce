@@ -3,8 +3,8 @@
   padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2.2188rem;
+  justify-content: space-between;
+  gap: var(--header-gap);
 }
 
 .header__logo {
@@ -15,8 +15,17 @@
 
 .header__label {
   order: 3;
-  width: 0;
+  width: 0; 
   overflow: hidden;
+}
+
+.header__search--mobile {
+  order: 4;
+}
+
+.header__search--mobile .label__icon {
+  position: relative;
+  right: .7rem;
 }
 
 .header__label.expanded {
@@ -32,9 +41,6 @@
 
 .label__icon {
   color: var(--c-gray);
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  position: absolute;
 }
 
 .header__login {
@@ -53,7 +59,6 @@
   }
 
   .header__logo {
-    margin-right: 2rem;
   }
 
   .header__label {
@@ -61,13 +66,16 @@
     background-color: var(--c-white);
     border-radius: 1.25rem;
     width: 100%;  
-    margin-right: 8.375rem;
     padding: .5rem 1rem;
     order: 2;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .header__search--mobile {
+    display: none;
   }
 
   .label__icon {
@@ -86,6 +94,9 @@
   }
 
   .header__label {
-    margin-right: 22.0625rem;
+  }
+
+  .header__logo {
+    min-width: 11rem;
   }
 }
