@@ -1,0 +1,36 @@
+@import url('./normalize.css');
+@import url('./reset.css');
+@import url('./header.css');
+@import url('./main-hero.css');
+@import url('./main-products.css');
+@import url('./info.css');
+@import url('./info-contact.css');
+@import url('./footer.css');
+
+:root {
+  --c-white: #f1eeef;
+  --c-white--d: #e8e3e5;
+  --c-white--ds: #dcd5d8;
+  --c-red: #f03844;
+  --c-red--d: #e4111f;
+  --c-red--ds: #b40e19;
+  --c-black: #0a090c;
+  --c-black--l: #221f29;
+  --c-black--ls: #3a3546;
+  --c-gray: #6d6779;
+  --c-gray--l: #868093;
+  --c-gray--ls: #a09cab;
+  --header-gap: 2.1875rem;
+}
+
+body * {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: var(--c-white);
+}
+
+img, video, input, textarea {
+  max-width: 100%;
+}
