@@ -20,6 +20,7 @@
   --c-gray: #6d6779;
   --c-gray--l: #868093;
   --c-gray--ls: #a09cab;
+  --header-gap: 2.1875rem;
 }
 
 body * {
