@@ -26,6 +26,8 @@
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--c-red);
+  display: flex;
+  gap: .25rem;
 }
 
 .products__item {
@@ -55,6 +57,11 @@
   .main__products--consoles,
   .main__products--miscelaneous {
     padding: 2rem;
+  }
+
+  .products__header.link {
+    gap: .5rem;
+    font-size: 1rem;
   }
 }
 
