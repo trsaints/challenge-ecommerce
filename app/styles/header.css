@@ -15,7 +15,7 @@
 
 .header__label {
   order: 3;
-  width: 0; 
+  width: 0;
   overflow: hidden;
 }
 
@@ -25,11 +25,11 @@
 
 .header__search--mobile .label__icon {
   position: relative;
-  right: .7rem;
+  right: 0.7rem;
 }
 
 .header__label.expanded {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: var(--c-white);
   border-radius: 1.25rem;
 }
@@ -47,9 +47,9 @@
   color: var(--c-red);
   font-weight: 600;
   font-size: 0.875rem;
-  border: .0625rem solid var(--c-red);
+  border: 0.0625rem solid var(--c-red);
   display: inline-block;
-  padding: .6rem 3rem;
+  padding: 0.6rem 3rem;
   order: 2;
 }
 
@@ -58,15 +58,14 @@
     padding: 1rem 2rem;
   }
 
-  .header__logo {
-  }
-
   .header__label {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     background-color: var(--c-white);
     border-radius: 1.25rem;
-    width: 100%;  
-    padding: .5rem 1rem;
+    width: 100%;
+    overflow: visible;
+    padding: 0.5rem 1rem;
+    margin-right: calc(8.375rem - var(--header-gap));
     order: 2;
 
     display: flex;
@@ -83,20 +82,27 @@
   }
 
   .header__login {
-    padding: .875rem 4rem;
+    padding: 0.875rem 4rem;
     order: 3;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .header {
-    padding: 2rem 9.5rem;
-  }
-
-  .header__label {
+    padding: 1rem 4.25rem;
   }
 
   .header__logo {
     min-width: 11rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    padding: 2rem 9.5rem;
+  }
+
+  .header__label {
+    margin-right: calc(22.0625rem - var(--header-gap));
   }
 }
