@@ -1,7 +1,7 @@
 import { elementController } from '../controllers/element-controller.js' ;
 
 export class ProductCard {
-  generateBanner(caption) {
+  generateBanner(caption, src) {
     const cardFigure = elementController.generateElement(
       "figure",
       "item__banner"
@@ -12,7 +12,7 @@ export class ProductCard {
       "item__description"
     );
 
-    figureImg.setAttribute("src", "./app/assets/images/alura_geek_logo.svg");
+    figureImg.setAttribute("src", src);
     figcaption.textContent = caption;
 
     cardFigure.appendChild(figureImg);
@@ -41,7 +41,7 @@ export class ProductCard {
       "li",
       "products__item"
     );
-    const cardBanner = this.generateBanner(product.name);
+    const cardBanner = this.generateBanner(product.name, product.image);
     const cardContent = this.generateContent(product.price, "#");
 
     productCard.appendChild(cardBanner);
