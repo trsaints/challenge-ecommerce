@@ -1,5 +1,5 @@
-async function getProducts() {
-  const binURL = "https://api.jsonbin.io/v3/b/630a3993a1610e6386119477";
+async function getProducts(path) {
+  const binURL = `https://api.jsonbin.io/v3/b/630a3993a1610e6386119477/`;
   const apiKey = "$2b$10$IZVLAix31GSpjITpSAO8ketbp/8/A2MXyuqhVejENVI9aJxOvnvRy";
 
   const options = {
@@ -7,6 +7,7 @@ async function getProducts() {
     headers: {
       "X-Access-Key": `${apiKey}`,
       "X-Bin-Meta": false,
+      "X-JSON-Path": `$..${path}`,
       "Content-Type": "application/json",
     },
   };
