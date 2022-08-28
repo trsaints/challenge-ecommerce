@@ -26,11 +26,22 @@
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--c-red);
+  display: flex;
+  gap: 0.25rem;
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(154px, 100%), 1fr));
+  gap: 1rem;
 }
 
 .products__item {
+  flex: 9.75rem;
+  justify-content: space-between;
   display: flex;
   flex-direction: column;
+
   gap: 0.5rem;
 }
 
@@ -56,6 +67,19 @@
   .main__products--miscelaneous {
     padding: 2rem;
   }
+
+  .products__header.link {
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .item__link {
+    font-size: 1rem;
+  }
+
+  .products__list {
+    grid-template-columns: repeat(auto-fit, minmax(min(164px, 100%), 1fr));
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -72,5 +96,9 @@
 
   .products__header.title {
     font-size: 2rem;
+  }
+
+  .products__list {
+    grid-template-columns: repeat(auto-fit, minmax(min(176px, 100%), 1fr));
   }
 }
