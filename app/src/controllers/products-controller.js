@@ -6,7 +6,8 @@ function generateProductList(dataset) {
   const productCard = new ProductCard();
 
   productsService.getProducts(dataset).then((products) => {
-    products[0].forEach((product) => {
+    console.log(products)
+    products.forEach((product) => {
       productCard.renderProductCard(product, listTarget);
     });
   });
