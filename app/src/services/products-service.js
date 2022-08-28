@@ -7,7 +7,7 @@ async function getProducts(path) {
     headers: {
       "X-Access-Key": `${apiKey}`,
       "X-Bin-Meta": false,
-      "X-JSON-Path": `$..${path}`,
+      "X-JSON-Path": `$..${path}[:6]`,
       "Content-Type": "application/json",
     },
   };
