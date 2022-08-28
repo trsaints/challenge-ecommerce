@@ -1,3 +1,5 @@
+@import url('./animations.css');
+
 .main__products {
   display: flex;
   flex-direction: column;
@@ -34,6 +36,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(154px, 100%), 1fr));
   gap: 1rem;
+
+  min-height: 15rem;
+}
+
+.products__list.loading {
+  background: url('../assets/images/undraw_portfolio_re_qwm5.svg') center / 15rem no-repeat;
 }
 
 .products__item {
@@ -43,6 +51,8 @@
   flex-direction: column;
 
   gap: 0.5rem;
+
+  animation: fade-in .3s forwards;
 }
 
 .item__description {

@@ -7,6 +7,7 @@ function generateProductList(dataset) {
 
   productsService.getProducts(dataset).then((products) => {
     console.log(products)
+    listTarget.classList.remove("loading");
     products.forEach((product) => {
       productCard.renderProductCard(product, listTarget);
     });
