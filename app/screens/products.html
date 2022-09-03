@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/icons/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../assets/icons/css/brands.min.css" />
+    <link rel="stylesheet" href="../assets/icons/css/solid.min.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>AluraGeek</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <img
+        class="header__logo"
+        src="../assets/images/alura_geek_logo.svg"
+        alt=""
+      />
+
+      <label class="header__label">
+        <input
+          class="header__search"
+          type="search"
+          name=""
+          id=""
+          placeholder="O que deseja encontrar?"
+        />
+
+        <i class="fa-solid fa-magnifying-glass label__icon"></i>
+      </label>
+
+      <button
+        class="header__search--mobile"
+        type="button"
+        title="Faça sua busca"
+      >
+        <i class="fa-solid fa-magnifying-glass label__icon"></i>
+      </button>
+
+      <a class="header__login" href="#">Login</a>
+    </header>
+
+    <main class="main">
+      <header class="main__hero">
+        <h1 class="hero__title">Nossos produtos</h1>
+
+        <p>Encontre fascinantes artigos, chaveiros, action figures e muito mais para sua coleção.</p>
+      </header>
+
+      <section class="main__products" data-catalog="products">
+        <section class="main__products--geeks">
+          <header class="products__header">
+            <h2 class="products__header title">Consoles</h2>
+          </header>
+
+          <ul class="products__list loading" data-products="consoles"></ul>
+        </section>
+
+        <section class="main__products--consoles">
+          <header class="products__header">
+            <h2 class="products__header title">Chaveiros</h2>
+          </header>
+
+          <ul class="products__list loading" data-products="keyrings"></ul>
+        </section>
+
+        <section class="main__products--miscelaneous">
+          <header class="products__header">
+            <h2 class="products__header title">Action Figures</h2>
+          </header>
+
+          <ul class="products__list loading" data-products="actionFigures"></ul>
+        </section>
+
+        <section class="main__products--miscelaneous">
+          <header class="products__header">
+            <h2 class="products__header title">Quadros</h2>
+          </header>
+
+          <ul class="products__list loading" data-products="canvas"></ul>
+        </section>
+      </section>
+    </main>
+
+    <aside class="info">
+      <a href="" class="navigation__link" title="Início">
+        <img
+          src="../assets/images/alura_geek_logo_dark.svg"
+          alt=""
+          class="info__logo"
+        />
+      </a>
+
+      <nav class="info__navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Quem somos nós</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Política de privacidade</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Programa de fidelidade</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Nossas lojas</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Quero ser franqueado</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Anuncie aqui</a>
+          </li>
+        </ul>
+      </nav>
+
+      <form action="index.html" class="info__contact">
+        <fieldset class="contact__fieldset">
+          <legend class="fieldset__legend">Fale conosco</legend>
+
+          <label class="fieldset__section"
+            >Nome <input type="text" class="section__input"
+          /></label>
+
+          <label class="fieldset__section"
+            >Mensagem
+            <textarea name="" class="section__textarea"></textarea>
+          </label>
+        </fieldset>
+
+        <input class="contact__submit" type="submit" value="Enviar mensagem" />
+      </form>
+    </aside>
+
+    <footer class="footer">
+      <p>
+        Desenvolvido por
+        <a
+          href="https://github.com/trsaints/challenge-ecommerce/"
+          class="footer__link"
+          >@trsaints</a
+        ><br />
+        2022
+      </p>
+    </footer>
+
+    <script src="../src/index.js" type="module"></script>
+  </body>
+</html>
