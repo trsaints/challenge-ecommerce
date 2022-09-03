@@ -1,7 +1,8 @@
 import { elementController } from '../controllers/element-controller.js' ;
 
 export class ProductCard {
-  generateBanner(caption, src) {
+  generateBanner(caption, image) {
+    const path = "./app/assets/images/"
     const cardFigure = elementController.generateElement(
       "figure",
       "item__banner"
@@ -12,7 +13,7 @@ export class ProductCard {
       "item__description"
     );
 
-    figureImg.setAttribute("src", src);
+    figureImg.setAttribute("src", `${path}${image}`);
     figcaption.textContent = caption;
 
     cardFigure.appendChild(figureImg);
