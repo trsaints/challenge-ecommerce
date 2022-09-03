@@ -1,27 +1,34 @@
 import { productsService } from "../services/products-service.js";
 import { ProductCard } from "../interfaces/ProductCard.js";
 
-function generateProductList(dataset) {
-  const listTarget = document.querySelector(`[data-products='${dataset}']`);
-  const productCard = new ProductCard();
-
-  productsService.getProducts(dataset).then((products) => {
-    console.log(products)
-    listTarget.classList.remove("loading");
-    products.forEach((product) => {
-      productCard.renderProductCard(product, listTarget);
-    });
-  });
-}
-
-function renderProductsLists() {
-  const listsTargets = document.querySelectorAll("[data-products]");
-
-  listsTargets.forEach((list) => {
-    generateProductList(list.dataset.products);
-  });
-}
-
 export const productController = {
-  renderProductsLists,
+  renderList(products, list, target) {
+    list.classList.remove("loading");
+    products.forEach((product) => {
+      target.render(product, list);
+    });
+  },
+
+  generateProductList(dataset, option) {
+    const listTarget = document.querySelector(`[data-products='${dataset}']`);
+    const productCard = new ProductCard();
+
+    productsService.getProducts(dataset, option).then((products) => {
+      console.log(products);
+      this.renderList(products, listTarget, productCard);
+    });
+  },
+
+  renderProductsLists(path) {
+    const listsTargets = document.querySelectorAll("[data-products]");
+
+    const option = {
+      index: "abridged",
+      products: "full"
+    }
+
+    listsTargets.forEach((list) => {
+      this.generateProductList(list.dataset.products, option[path]);
+    });
+  },
 };
