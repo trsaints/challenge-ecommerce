@@ -36,7 +36,7 @@ export class ProductCard {
     return frag;
   }
 
-  generateCard(product) {
+  generate(product) {
     const productCard = elementController.generateElement(
       "li",
       "products__item"
@@ -50,8 +50,8 @@ export class ProductCard {
     return productCard;
   }
 
-  renderProductCard(product, target) {
-    const productCard = this.generateCard(product);
+  render(product, target) {
+    const productCard = this.generate(product);
 
     target.appendChild(productCard);
   }
