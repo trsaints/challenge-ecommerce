@@ -37,11 +37,11 @@
   grid-template-columns: repeat(auto-fit, minmax(min(154px, 100%), 1fr));
   gap: 1rem;
 
-  min-height: 15rem;
+  min-height: 20rem;
 }
 
 .products__list.loading {
-  background: url('../assets/images/undraw_portfolio_re_qwm5.svg') center / 15rem no-repeat;
+  background: url('../assets/images/loading_thumbnail.svg') center / 15rem no-repeat;
 }
 
 .products__item {
@@ -89,6 +89,10 @@
 
   .products__list {
     grid-template-columns: repeat(auto-fit, minmax(min(164px, 100%), 1fr));
+  }
+  
+  .products__list.loading {
+    background-size: 20rem;
   }
 }
 
