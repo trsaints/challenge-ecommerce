@@ -8,10 +8,13 @@
 @import url('./footer.css');
 
 :root {
-  --c-white--l: hsl(0, 10%, 99%);
+  --c-white--ls: hsl(0, 10%, 99%);
+  --c-white--l: hsl(0, 10%, 96%);
   --c-white: #f1eeef;
   --c-white--d: #e8e3e5;
   --c-white--ds: #dcd5d8;
+  --c-red--ls: hsl(356, 86%, 70%);
+  --c-red--l: hsl(356, 86%, 65%);
   --c-red: #f03844;
   --c-red--d: #e4111f;
   --c-red--ds: #b40e19;
