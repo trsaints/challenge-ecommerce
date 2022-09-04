@@ -32,9 +32,12 @@ export class ProductCard {
     const frag = document.createDocumentFragment();
     const productPrice = elementController.generateElement("p", "item__price");
     const productLink = elementController.generateElement("a", "item__link");
+    const linkIcon = elementController.generateElement("i", "fa-solid");
+    linkIcon.classList.add("fa-up-right-from-square");
 
     productPrice.textContent = `R$ ${price}`;
-    productLink.textContent = "Ver produto";
+    productLink.textContent = "Ver produto ";
+    productLink.appendChild(linkIcon);
     productLink.setAttribute("href", URL);
 
     frag.appendChild(productPrice);
