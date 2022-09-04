@@ -13,6 +13,24 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
     <title>AluraGeek</title>
   </head>
 
@@ -28,7 +46,7 @@
         <input
           class="header__search"
           type="search"
-          name=""
+          name="search"
           id=""
           placeholder="O que deseja encontrar?"
         />
@@ -51,10 +69,13 @@
       <header class="main__hero">
         <h1 class="hero__title">Nossos produtos</h1>
 
-        <p>Encontre fascinantes artigos, chaveiros, action figures e muito mais para sua coleção.</p>
+        <p>
+          Encontre fascinantes artigos, chaveiros, action figures e muito mais
+          para sua coleção.
+        </p>
       </header>
 
-      <section class="main__products" data-catalog="products">
+      <div class="main__products" data-catalog="products">
         <section class="main__products--geeks">
           <header class="products__header">
             <h2 class="products__header title">Consoles</h2>
@@ -86,11 +107,11 @@
 
           <ul class="products__list loading" data-products="canvas"></ul>
         </section>
-      </section>
+      </div>
     </main>
 
     <aside class="info">
-      <a href="" class="navigation__link" title="Início">
+      <a href="" class="navigation__link logo" title="Início">
         <img
           src="../assets/images/alura_geek_logo_dark.svg"
           alt=""
@@ -135,7 +156,7 @@
 
           <label class="fieldset__section"
             >Mensagem
-            <textarea name="" class="section__textarea"></textarea>
+            <textarea name="message" class="section__textarea"></textarea>
           </label>
         </fieldset>
 
