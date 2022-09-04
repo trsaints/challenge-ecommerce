@@ -32,7 +32,7 @@
         <input
           class="header__search"
           type="search"
-          name=""
+          name="search"
           id=""
           placeholder="O que deseja encontrar?"
         />
@@ -53,16 +53,16 @@
 
     <main class="main">
       <header class="main__hero">
-        <h1 class="hero__title">Dezembro Promocional</h1>
+        <h1 class="hero__title">Produtos Geek</h1>
 
         <p class="hero__description">
-          Produtos selecionados com 33% de desconto
+          Para aqueles que amam as séries, jogos, filmes e quadrinhos que marcaram gerações.
         </p>
 
-        <a class="hero__link" href="#">Ver produtos</a>
+        <a class="hero__link" href="./app/screens/products.html">Ver produtos <i class="fa-solid fa-up-right-from-square"></i></a>
       </header>
 
-      <section class="main__products" data-catalog="index">
+      <div class="main__products" data-catalog="index">
         <section class="main__products--geeks">
           <header class="products__header">
             <h2 class="products__header title">Consoles</h2>
@@ -104,11 +104,11 @@
 
           <ul class="products__list loading" data-products="actionFigures"></ul>
         </section>
-      </section>
+      </div>
     </main>
 
     <aside class="info">
-      <a href="" class="navigation__link" title="Início">
+      <a href="" class="navigation__link logo" title="Início">
         <img
           src="./app/assets/images/alura_geek_logo_dark.svg"
           alt=""
@@ -153,7 +153,7 @@
 
           <label class="fieldset__section"
             >Mensagem
-            <textarea name="" class="section__textarea"></textarea>
+            <textarea name="message" class="section__textarea"></textarea>
           </label>
         </fieldset>
 
