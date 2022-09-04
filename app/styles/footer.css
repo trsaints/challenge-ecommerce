@@ -7,6 +7,32 @@
   font-weight: 500;
 }
 
+.footer__link {
+  display: inline-block;
+  padding: 0.25rem;
+
+  isolation: isolate;
+  position: relative;
+  transition: all 0.3s ease;
+  border: .125rem solid transparent;
+  border-bottom-color: inherit;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  color: var(--c-red--ls);
+}
+
+.footer__link:hover {
+  border-color: transparent;
+}
+
+.footer__link:focus {
+  border-color: var(--c-red--ls);
+  border-style: dashed;
+  transform: scale(1.05);
+}
+
 @media screen and (min-width: 768px) {
   .footer {
     padding: 2rem;

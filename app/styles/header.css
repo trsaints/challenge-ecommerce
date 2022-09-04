@@ -17,6 +17,29 @@
   order: 3;
   width: 0;
   overflow: hidden;
+
+  transition: all .3s ease;
+}
+
+.header__label:focus-within {
+  box-shadow: inset 0 0 .25rem var(--c-gray);
+  color: var(--c-red--ds);
+}
+
+.label__icon {
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+.header__label:focus-within .label__icon,
+.header__label:hover .label__icon {
+  width: 0%;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.header__search {
+  width: 100%;
 }
 
 .header__search--mobile {
@@ -39,18 +62,26 @@
   font-size: 0.875rem;
 }
 
-.label__icon {
-  color: var(--c-gray);
-}
-
 .header__login {
   color: var(--c-red);
   font-weight: 600;
   font-size: 0.875rem;
-  border: 0.0625rem solid var(--c-red);
+  border: 0.125rem solid var(--c-red--d);
   display: inline-block;
   padding: 0.6rem 3rem;
   order: 2;
+
+  transition: all .3s ease;
+}
+
+.header__login:hover,
+.header__login:focus {
+  background-color: var(--c-red--d);
+  color: var(--c-white--ls);
+}
+
+.header__login:focus {
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 768px) {

@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  
 }
 
 .fieldset__legend {
@@ -19,28 +18,52 @@
 .fieldset__section {
   padding: 0.5rem 0.75rem;
   background-color: var(--c-white--ds);
-  color: var(--c-gray);
+  color: var(--c-black--ls);
   cursor: pointer;
   display: flex;
   flex-direction: column;
   border-radius: 0.25rem;
-  border-bottom: .0625rem solid var(--c-gray--ls);
+  border-bottom: 0.25rem solid transparent;
 
+  transition: all 0.3s ease;
+}
+
+.fieldset__section:focus-within {
+  transform: translateX(2%);
+}
+
+.fieldset__section:focus-within {
+  box-shadow: inset 0 0 5px var(--c-gray);
+  border-bottom-color: var(--c-red);
+}
+.fieldset__section:hover {
+  border-bottom-color: var(--c-red);
 }
 
 .section__input,
 .section__textarea {
-  color: var(--c-black--l);
+  color: var(--c-black);
 }
 
 .contact__submit {
-  padding: .75rem 1rem;
-  background-color: var(--c-red);
-  font-size: .875rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--c-red--d);
+  font-size: 0.875rem;
   font-weight: 600;
-  color: var(--c-white);
+  color: var(--c-white--ls);
   text-align: center;
   max-width: 9.4375rem;
+
+  transition: all 0.3s ease;
+}
+
+.contact__submit:hover,
+.contact__submit:focus {
+  box-shadow: 0.25rem 0.25rem 0.25rem var(--c-gray);
+}
+
+.contact__submit:focus {
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 768px) {

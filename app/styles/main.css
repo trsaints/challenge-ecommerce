@@ -1,11 +1,11 @@
-@import url('./normalize.css');
-@import url('./reset.css');
-@import url('./header.css');
-@import url('./main-hero.css');
-@import url('./main-products.css');
-@import url('./info.css');
-@import url('./info-contact.css');
-@import url('./footer.css');
+@import url("./normalize.css");
+@import url("./reset.css");
+@import url("./header.css");
+@import url("./main-hero.css");
+@import url("./main-products.css");
+@import url("./info.css");
+@import url("./info-contact.css");
+@import url("./footer.css");
 
 :root {
   --c-white--ls: hsl(0, 10%, 99%);
@@ -28,13 +28,17 @@
 }
 
 body * {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   background-color: var(--c-white);
 }
 
-img, video, input, textarea {
+img,
+video,
+input,
+textarea {
   max-width: 100%;
 }

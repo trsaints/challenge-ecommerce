@@ -25,11 +25,21 @@
 }
 
 .products__header.link {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--c-red);
+  color: var(--c-black);
   display: flex;
   gap: 0.25rem;
+  padding: .5rem;
+
+  transition: all .3s ease;
+}
+
+.products__header.link:hover,
+.products__header.link:focus {
+  background-color: var(--c-red);
+  color: var(--c-white--ls);
+  box-shadow: 0 0 .5rem var(--c-gray);
 }
 
 .products__list {
@@ -96,9 +106,9 @@
   font-weight: 700;
   display: inline-block;
   padding: .5rem;
-  background-color: var(--c-red);
+  background-color: var(--c-red--d);
   border-radius: .25rem;
-  color: var(--c-white);
+  color: var(--c-white--ls);
   text-align: center;
 }
 
@@ -112,7 +122,6 @@
 
   .products__header.link {
     gap: 0.5rem;
-    font-size: 1rem;
   }
 
   .item__link {
