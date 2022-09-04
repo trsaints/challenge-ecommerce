@@ -1,8 +1,14 @@
 import { elementController } from '../controllers/element-controller.js' ;
 
 export class ProductCard {
-  generateBanner(caption, image) {
-    const path = "./app/assets/images/"
+  generateBanner(caption, image, ref) {
+    const entryPoint = {
+      index: "./app/",
+      products: "../"
+    }
+
+    const path = `${entryPoint[ref]}assets/images/${image}`;
+
     const cardFigure = elementController.generateElement(
       "figure",
       "item__banner"
@@ -13,7 +19,7 @@ export class ProductCard {
       "item__description"
     );
 
-    figureImg.setAttribute("src", `${path}${image}`);
+    figureImg.setAttribute("src", path);
     figcaption.textContent = caption;
 
     cardFigure.appendChild(figureImg);
@@ -26,9 +32,12 @@ export class ProductCard {
     const frag = document.createDocumentFragment();
     const productPrice = elementController.generateElement("p", "item__price");
     const productLink = elementController.generateElement("a", "item__link");
+    const linkIcon = elementController.generateElement("i", "fa-solid");
+    linkIcon.classList.add("fa-up-right-from-square");
 
     productPrice.textContent = `R$ ${price}`;
-    productLink.textContent = "Ver produto";
+    productLink.textContent = "Ver produto ";
+    productLink.appendChild(linkIcon);
     productLink.setAttribute("href", URL);
 
     frag.appendChild(productPrice);
@@ -37,12 +46,13 @@ export class ProductCard {
     return frag;
   }
 
-  generate(product) {
+  generate(product, context) {
     const productCard = elementController.generateElement(
       "li",
       "products__item"
     );
-    const cardBanner = this.generateBanner(product.name, product.image);
+
+    const cardBanner = this.generateBanner(product.name, product.image, context);
     const cardContent = this.generateContent(product.price, "#");
 
     productCard.appendChild(cardBanner);
@@ -52,7 +62,8 @@ export class ProductCard {
   }
 
   render(product, target) {
-    const productCard = this.generate(product);
+    const context = document.querySelector("[data-catalog]");
+    const productCard = this.generate(product, context.dataset.catalog);
 
     target.appendChild(productCard);
   }

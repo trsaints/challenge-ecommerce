@@ -3,19 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./app/assets/icons/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="./app/assets/icons/css/brands.min.css" />
-    <link rel="stylesheet" href="./app/assets/icons/css/solid.min.css" />
-    <link rel="stylesheet" href="./app/styles/main.css" />
+    <link rel="stylesheet" href="../assets/icons/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../assets/icons/css/brands.min.css" />
+    <link rel="stylesheet" href="../assets/icons/css/solid.min.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
     <link rel="manifest" href="./site.webmanifest" />
     <title>AluraGeek</title>
   </head>
@@ -24,7 +38,7 @@
     <header class="header">
       <img
         class="header__logo"
-        src="./app/assets/images/alura_geek_logo.svg"
+        src="../assets/images/alura_geek_logo.svg"
         alt=""
       />
 
@@ -53,25 +67,18 @@
 
     <main class="main">
       <header class="main__hero">
-        <h1 class="hero__title">Produtos Geek</h1>
+        <h1 class="hero__title">Nossos produtos</h1>
 
-        <p class="hero__description">
-          Para aqueles que amam as séries, jogos, filmes e quadrinhos que marcaram gerações.
+        <p>
+          Encontre fascinantes artigos, chaveiros, action figures e muito mais
+          para sua coleção.
         </p>
-
-        <a class="hero__link" href="./app/screens/products.html">Ver produtos <i class="fa-solid fa-up-right-from-square"></i></a>
       </header>
 
-      <div class="main__products" data-catalog="index">
+      <div class="main__products" data-catalog="products">
         <section class="main__products--geeks">
           <header class="products__header">
             <h2 class="products__header title">Consoles</h2>
-            <a
-              href="./app/screens/products.html"
-              target="_blank"
-              class="products__header link"
-              >Ver todos <i class="fa-solid fa-arrow-right"></i
-            ></a>
           </header>
 
           <ul class="products__list loading" data-products="consoles"></ul>
@@ -80,12 +87,6 @@
         <section class="main__products--consoles">
           <header class="products__header">
             <h2 class="products__header title">Chaveiros</h2>
-            <a
-              href="./app/screens/products.html"
-              target="_blank"
-              class="products__header link"
-              >Ver todos <i class="fa-solid fa-arrow-right"></i
-            ></a>
           </header>
 
           <ul class="products__list loading" data-products="keyrings"></ul>
@@ -94,15 +95,17 @@
         <section class="main__products--miscelaneous">
           <header class="products__header">
             <h2 class="products__header title">Action Figures</h2>
-            <a
-              href="./app/screens/products.html"
-              target="_blank"
-              class="products__header link"
-              >Ver todos <i class="fa-solid fa-arrow-right"></i
-            ></a>
           </header>
 
           <ul class="products__list loading" data-products="actionFigures"></ul>
+        </section>
+
+        <section class="main__products--miscelaneous">
+          <header class="products__header">
+            <h2 class="products__header title">Quadros</h2>
+          </header>
+
+          <ul class="products__list loading" data-products="canvas"></ul>
         </section>
       </div>
     </main>
@@ -110,7 +113,7 @@
     <aside class="info">
       <a href="" class="navigation__link logo" title="Início">
         <img
-          src="./app/assets/images/alura_geek_logo_dark.svg"
+          src="../assets/images/alura_geek_logo_dark.svg"
           alt=""
           class="info__logo"
         />
@@ -173,6 +176,6 @@
       </p>
     </footer>
 
-    <script src="./app/src/index.js" type="module"></script>
+    <script src="../src/index.js" type="module"></script>
   </body>
 </html>

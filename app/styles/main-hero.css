@@ -7,11 +7,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: .5rem;
+  gap: 1rem;
 }
 
 .hero__title {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
@@ -23,18 +23,29 @@
 .hero__link {
   display: inline-block;
   padding: .875rem 1rem;
-  font-weight: 600;
+  font-weight: 700;
   font-size: .875rem;
-  background-color: var(--c-red);
-  max-width: 7.4375rem;
+  background-color: rgba(0,0,0,0.4);
+  border: .125rem solid var(--c-red--d);
+  max-width: 9rem;
   text-align: center;
+
+  transition: all .3s ease;
+}
+
+.hero__link:hover,
+.hero__link:focus {
+  background-color: var(--c-red--d);
+}
+
+.hero__link:focus {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
   .main__hero {
     padding: 2rem;
     padding-top: 10.0625rem;
-    gap: 1rem;
   }
 
   .hero__title {
@@ -50,9 +61,5 @@
   .main__hero {
     padding-top: 9.375rem;
     padding-inline: 9.5rem;
-  }
-
-  .hero__link {
-    max-width: 8.125rem;
   }
 }
