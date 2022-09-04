@@ -47,6 +47,7 @@
 }
 
 .header__search--mobile .label__icon {
+  color: var(--c-gray--l);
   position: relative;
   right: 0.7rem;
 }
