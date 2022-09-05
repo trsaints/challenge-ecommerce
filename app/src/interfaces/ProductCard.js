@@ -1,13 +1,11 @@
-import { elementController } from '../controllers/element-controller.js' ;
+import { elementController } from "../controllers/element-controller.js";
+import { Context } from "../models/Context.js";
 
 export class ProductCard {
-  generateBanner(caption, image, ref) {
-    const entryPoint = {
-      index: "./app/",
-      products: "../"
-    }
+  generateBanner(caption, image, context) {
+    const entryPoint = new Context("./app/", "../");
 
-    const path = `${entryPoint[ref]}assets/images/${image}`;
+    const path = `${entryPoint[context]}assets/images/${image}`;
 
     const cardFigure = elementController.generateElement(
       "figure",
@@ -52,7 +50,12 @@ export class ProductCard {
       "products__item"
     );
 
-    const cardBanner = this.generateBanner(product.name, product.image, context);
+    const cardBanner = this.generateBanner(
+      product.name,
+      product.image,
+      context
+    );
+
     const cardContent = this.generateContent(product.price, "#");
 
     productCard.appendChild(cardBanner);
@@ -62,8 +65,8 @@ export class ProductCard {
   }
 
   render(product, target) {
-    const context = document.querySelector("[data-catalog]");
-    const productCard = this.generate(product, context.dataset.catalog);
+    const pageContext = document.querySelector("[data-catalog]");
+    const productCard = this.generate(product, pageContext.dataset.catalog);
 
     target.appendChild(productCard);
   }
