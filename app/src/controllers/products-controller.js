@@ -1,5 +1,6 @@
 import { productsService } from "../services/products-service.js";
 import { ProductCard } from "../interfaces/ProductCard.js";
+import { Context } from "../models/Context.js";
 
 export const productController = {
   renderList(products, list, target) {
@@ -19,16 +20,13 @@ export const productController = {
     });
   },
 
-  renderProductsLists(path) {
+  renderProductsLists(context) {
     const listsTargets = document.querySelectorAll("[data-products]");
 
-    const option = {
-      index: "abridged",
-      products: "full"
-    }
+    const option = new Context("abridged", "full");
 
     listsTargets.forEach((list) => {
-      this.generateProductList(list.dataset.products, option[path]);
+      this.generateProductList(list.dataset.products, option[context]);
     });
   },
 };
