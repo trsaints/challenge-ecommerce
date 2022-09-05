@@ -7,12 +7,9 @@ export class ProductCard {
 
     const path = `${entryPoint[context]}assets/images/${image}`;
 
-    const cardFigure = elementController.generateElement(
-      "figure",
-      "item__banner"
-    );
-    const figureImg = elementController.generateElement("img", "item__image");
-    const figcaption = elementController.generateElement(
+    const cardFigure = elementController.generate("figure", "item__banner");
+    const figureImg = elementController.generate("img", "item__image");
+    const figcaption = elementController.generate(
       "figcaption",
       "item__description"
     );
@@ -28,9 +25,9 @@ export class ProductCard {
 
   generateContent(price, URL) {
     const frag = document.createDocumentFragment();
-    const productPrice = elementController.generateElement("p", "item__price");
-    const productLink = elementController.generateElement("a", "item__link");
-    const linkIcon = elementController.generateElement("i", "fa-solid");
+    const productPrice = elementController.generate("p", "item__price");
+    const productLink = elementController.generate("a", "item__link");
+    const linkIcon = elementController.generate("i", "fa-solid");
     linkIcon.classList.add("fa-up-right-from-square");
 
     productPrice.textContent = `R$ ${price}`;
@@ -45,10 +42,7 @@ export class ProductCard {
   }
 
   generate(product, context) {
-    const productCard = elementController.generateElement(
-      "li",
-      "products__item"
-    );
+    const productCard = elementController.generate("li", "products__item");
 
     const cardBanner = this.generateBanner(
       product.name,
