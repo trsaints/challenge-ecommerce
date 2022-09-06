@@ -1,7 +1,7 @@
 import { productsService } from "../services/products-service.js";
-import { ProductCard } from "../interfaces/ProductCard.js";
-import { Context } from "../models/Context.js";
-import { Product } from "../models/Product.js";
+import { ProductCard } from "../model/ProductCard.js";
+import { Context } from "../class/Context.js";
+import { Product } from "../class/Product.js";
 
 export const productController = {
   generateList(products, target) {
