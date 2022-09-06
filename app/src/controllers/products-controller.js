@@ -1,6 +1,7 @@
 import { productsService } from "../services/products-service.js";
 import { ProductCard } from "../interfaces/ProductCard.js";
 import { Context } from "../models/Context.js";
+import { Product } from "../models/Product.js";
 
 export const productController = {
   generateList(products, target) {
@@ -8,7 +9,7 @@ export const productController = {
 
     target.classList.remove("loading");
     products.forEach((product) => {
-      card.render(product, target);
+      card.render(new Product(product), target);
     });
   },
 
@@ -16,7 +17,6 @@ export const productController = {
     const listTarget = document.querySelector(`[data-products='${dataset}']`);
 
     productsService.getProducts(dataset, option).then((products) => {
-      console.log(products);
       this.generateList(products, listTarget);
     });
   },
