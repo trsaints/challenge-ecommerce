@@ -4,39 +4,42 @@ import { Context } from "../models/Context.js";
 export class ProductCard {
   generateBanner(caption, image, context) {
     const entryPoint = new Context("./app/", "../");
-
     const path = `${entryPoint[context]}assets/images/${image}`;
 
-    const cardFigure = elementController.generate("figure", "item__banner");
-    const figureImg = elementController.generate("img", "item__image");
-    const figcaption = elementController.generate(
-      "figcaption",
-      "item__description"
-    );
+    const figure = elementController.generate("figure", "item__banner");
+    
+    const banner = {
+      img: elementController.generate("img", "item__image"),
+      caption: elementController.generate("figcaption", "item__description"),
+    };
 
-    figureImg.setAttribute("src", path);
-    figcaption.textContent = caption;
+    banner.img.setAttribute("src", path);
+    banner.caption.textContent = caption;
 
-    cardFigure.appendChild(figureImg);
-    cardFigure.appendChild(figcaption);
+    figure.appendChild(banner.img);
+    figure.appendChild(banner.caption);
 
-    return cardFigure;
+    return figure;
   }
 
   generateContent(price, URL) {
     const frag = document.createDocumentFragment();
-    const productPrice = elementController.generate("p", "item__price");
-    const productLink = elementController.generate("a", "item__link");
+
+    const content = {
+      price: elementController.generate("p", "item__price"),
+      link: elementController.generate("a", "item__link"),
+    };
+
     const linkIcon = elementController.generate("i", "fa-solid");
     linkIcon.classList.add("fa-up-right-from-square");
 
-    productPrice.textContent = `R$ ${price}`;
-    productLink.textContent = "Ver produto ";
-    productLink.appendChild(linkIcon);
-    productLink.setAttribute("href", URL);
+    content.price.textContent = `R$ ${price}`;
+    content.link.textContent = "Ver produto ";
+    content.link.appendChild(linkIcon);
+    content.link.setAttribute("href", URL);
 
-    frag.appendChild(productPrice);
-    frag.appendChild(productLink);
+    frag.appendChild(content.price);
+    frag.appendChild(content.link);
 
     return frag;
   }
@@ -44,16 +47,13 @@ export class ProductCard {
   generate(product, context) {
     const productCard = elementController.generate("li", "products__item");
 
-    const cardBanner = this.generateBanner(
-      product.name,
-      product.image,
-      context
-    );
+    const card = {
+      banner: this.generateBanner(product.name, product.image, context),
+      content: this.generateContent(product.price, "#"),
+    };
 
-    const cardContent = this.generateContent(product.price, "#");
-
-    productCard.appendChild(cardBanner);
-    productCard.appendChild(cardContent);
+    productCard.appendChild(card.banner);
+    productCard.appendChild(card.content);
 
     return productCard;
   }
