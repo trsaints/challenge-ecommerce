@@ -1,34 +1,33 @@
 import { productsService } from "../services/products-service.js";
-import { ProductCard } from "../interfaces/ProductCard.js";
+import { ProductCard } from "../model/ProductCard.js";
+import { Context } from "../class/Context.js";
+import { Product } from "../class/Product.js";
 
 export const productController = {
-  renderList(products, list, target) {
-    list.classList.remove("loading");
+  generateList(products, target) {
+    const card = new ProductCard();
+
+    target.classList.remove("loading");
     products.forEach((product) => {
-      target.render(product, list);
+      card.render(new Product(product), target);
     });
   },
 
-  generateProductList(dataset, option) {
+  renderList(dataset, option) {
     const listTarget = document.querySelector(`[data-products='${dataset}']`);
-    const productCard = new ProductCard();
 
     productsService.getProducts(dataset, option).then((products) => {
-      console.log(products);
-      this.renderList(products, listTarget, productCard);
+      this.generateList(products, listTarget);
     });
   },
 
-  renderProductsLists(path) {
+  renderAll(context) {
     const listsTargets = document.querySelectorAll("[data-products]");
 
-    const option = {
-      index: "abridged",
-      products: "full"
-    }
+    const option = new Context("abridged", "full");
 
     listsTargets.forEach((list) => {
-      this.generateProductList(list.dataset.products, option[path]);
+      this.renderList(list.dataset.products, option[context]);
     });
   },
 };

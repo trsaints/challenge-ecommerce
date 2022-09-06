@@ -42,3 +42,21 @@ input,
 textarea {
   max-width: 100%;
 }
+
+*::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--c-white--ds);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--c-red);
+}
+
+@media screen and (min-width: 512px) {
+  *::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+}

@@ -29,7 +29,7 @@
 }
 
 .fieldset__section:focus-within {
-  transform: translateX(2%);
+  transform: scale(1.02);
 }
 
 .fieldset__section:focus-within {
