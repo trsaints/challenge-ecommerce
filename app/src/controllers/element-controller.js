@@ -1,7 +1,7 @@
 export const elementController = {
-  generate(elem, elemClass) {
-    const currElement = document.createElement(elem);
-    currElement.classList.add(elemClass);
+  generate(element, selector) {
+    const currElement = document.createElement(element);
+    currElement.classList.add(selector);
 
     return currElement;
   },
