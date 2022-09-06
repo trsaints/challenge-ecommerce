@@ -1,4 +1,5 @@
 import { elementController } from "../controllers/element-controller.js";
+import { iconController } from "../controllers/icon-controller.js";
 import { Context } from "../models/Context.js";
 
 export class ProductCard {
@@ -32,6 +33,7 @@ export class ProductCard {
 
     const linkIcon = elementController.generate("i", "fa-solid");
     linkIcon.classList.add("fa-up-right-from-square");
+    iconController.hideIcon(linkIcon);
 
     content.price.textContent = `R$ ${price}`;
     content.link.textContent = "Ver produto ";
