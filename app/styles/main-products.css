@@ -109,7 +109,13 @@
   background-color: var(--c-red--d);
   border-radius: .25rem;
   color: var(--c-white--ls);
+  text-decoration: underline;
   text-align: center;
+}
+
+.item__link:hover,
+.item__link:focus {
+  text-decoration: none;
 }
 
 
