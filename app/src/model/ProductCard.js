@@ -1,6 +1,6 @@
 import { elementController } from "../controllers/element-controller.js";
 import { iconController } from "../controllers/icon-controller.js";
-import { Context } from "../models/Context.js";
+import { Context } from "../class/Context.js";
 
 export class ProductCard {
   generateBanner(caption, image, context) {
