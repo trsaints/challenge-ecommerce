@@ -43,6 +43,7 @@
       />
 
       <label class="header__label">
+        <span class="sr-only">Busque um produto: </span>
         <input
           class="header__search"
           type="search"
@@ -84,11 +85,17 @@
       <div class="main__products" data-catalog="products">
         <section class="main__products--geeks">
           <header class="products__header">
-            <h2 class="products__header--title">Consoles</h2>
+            <h2 class="products__header--title">
+              <span class="sr-only">Categoria: </span>Consoles
+            </h2>
 
-            <button class="products__toggle expanded" type="button" data-element="toggle">
+            <button
+              class="products__toggle expanded"
+              type="button"
+              data-element="toggle"
+            >
               <span class="sr-only">Mostrar todos</span>
-              <i class="fa-solid fa-circle-chevron-down"></i>
+              <i class="fa-solid fa-circle-chevron-down" aria-hidden="true"></i>
             </button>
           </header>
 
@@ -100,47 +107,78 @@
 
         <section class="main__products--consoles">
           <header class="products__header">
-            <h2 class="products__header--title">Chaveiros</h2>
+            <h2 class="products__header--title">
+              <span class="sr-only">Categoria: </span>Chaveiros
+            </h2>
 
-            <button class="products__toggle expanded" type="button" data-element="toggle">
+            <button
+              class="products__toggle expanded"
+              type="button"
+              data-element="toggle"
+            >
               <span class="sr-only">Mostrar todos</span>
-              <i class="fa-solid fa-circle-chevron-down"></i>
+              <i class="fa-solid fa-circle-chevron-down" aria-hidden="true"></i>
             </button>
           </header>
 
-          <ul class="products__list loading expanded" data-products="keyrings"></ul>
+          <ul
+            class="products__list loading expanded"
+            data-products="keyrings"
+          ></ul>
         </section>
 
         <section class="main__products--miscelaneous">
           <header class="products__header">
-            <h2 class="products__header--title">Action Figures</h2>
+            <h2 class="products__header--title">
+              <span class="sr-only">Categoria: </span>Action Figures
+            </h2>
 
-            <button class="products__toggle expanded" type="button" data-element="toggle">
+            <button
+              class="products__toggle expanded"
+              type="button"
+              data-element="toggle"
+            >
               <span class="sr-only">Mostrar todos</span>
-              <i class="fa-solid fa-circle-chevron-down"></i>
+              <i class="fa-solid fa-circle-chevron-down" aria-hidden="true"></i>
             </button>
           </header>
 
-          <ul class="products__list loading expanded" data-products="actionFigures"></ul>
+          <ul
+            class="products__list loading expanded"
+            data-products="actionFigures"
+          ></ul>
         </section>
 
         <section class="main__products--miscelaneous">
           <header class="products__header">
-            <h2 class="products__header--title">Quadros</h2>
+            <h2 class="products__header--title">
+              <span class="sr-only">Categoria: </span>Quadros
+            </h2>
 
-            <button class="products__toggle expanded" type="button" data-element="toggle">
+            <button
+              class="products__toggle expanded"
+              type="button"
+              data-element="toggle"
+            >
               <span class="sr-only">Mostrar todos</span>
-              <i class="fa-solid fa-circle-chevron-down"></i>
+              <i class="fa-solid fa-circle-chevron-down" aria-hidden="true"></i>
             </button>
           </header>
 
-          <ul class="products__list loading expanded" data-products="canvas"></ul>
+          <ul
+            class="products__list loading expanded"
+            data-products="canvas"
+          ></ul>
         </section>
       </div>
     </main>
 
     <aside class="info">
-      <a href="../../index.html" class="navigation__link logo" title="Voltar ao Início">
+      <a
+        href="../../index.html"
+        class="navigation__link logo"
+        title="Voltar ao Início"
+      >
         <img
           src="../assets/images/alura_geek_logo_dark.svg"
           alt=""

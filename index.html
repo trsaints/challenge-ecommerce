@@ -13,9 +13,23 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
     <link rel="manifest" href="./site.webmanifest" />
     <title>AluraGeek</title>
   </head>
@@ -29,6 +43,8 @@
       />
 
       <label class="header__label">
+        <span class="sr-only">Busque um produto: </span>
+
         <input
           class="header__search"
           type="search"
@@ -37,7 +53,10 @@
           placeholder="O que deseja encontrar?"
         />
 
-        <i class="fa-solid fa-magnifying-glass label__icon" aria-hidden="true"></i>
+        <i
+          class="fa-solid fa-magnifying-glass label__icon"
+          aria-hidden="true"
+        ></i>
       </label>
 
       <button
@@ -45,7 +64,10 @@
         type="button"
         title="Faça sua busca"
       >
-        <i class="fa-solid fa-magnifying-glass label__icon" aria-hidden="true"></i>
+        <i
+          class="fa-solid fa-magnifying-glass label__icon"
+          aria-hidden="true"
+        ></i>
       </button>
 
       <a class="header__login" href="#">Login</a>
@@ -56,59 +78,88 @@
         <h1 class="hero__title">Produtos Geek</h1>
 
         <p class="hero__description">
-          Para aqueles que amam as séries, jogos, filmes e quadrinhos que marcaram gerações.
+          Para aqueles que amam as séries, jogos, filmes e quadrinhos que
+          marcaram gerações.
         </p>
 
-        <a class="hero__link" href="./app/screens/products.html">Ver produtos <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i></a>
+        <a class="hero__link" href="./app/screens/products.html"
+          >Ver produtos
+          <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i
+        ></a>
       </header>
 
       <div class="main__products" data-catalog="index">
         <section class="main__products--geeks">
           <header class="products__header">
-            <h2 class="products__header--title">Consoles</h2>
+            <h2 class="products__header--title">
+              <span class="sr-only">Categoria: </span>Consoles
+            </h2>
+
             <a
               href="./app/screens/products.html"
               target="_blank"
               class="products__header--link"
-              >Ver todos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+              >Ver todos
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
             ></a>
           </header>
 
-          <ul class="products__list loading expanded" data-products="consoles"></ul>
+          <ul
+            class="products__list loading expanded"
+            data-products="consoles"
+          ></ul>
         </section>
 
         <section class="main__products--consoles">
           <header class="products__header">
-            <h2 class="products__header--title">Chaveiros</h2>
+            <h2 class="products__header--title">
+              <span class="sr-only">Categoria: </span>Chaveiros
+            </h2>
+
             <a
               href="./app/screens/products.html"
               target="_blank"
               class="products__header--link"
-              >Ver todos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+              >Ver todos
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
             ></a>
           </header>
 
-          <ul class="products__list loading expanded" data-products="keyrings"></ul>
+          <ul
+            class="products__list loading expanded"
+            data-products="keyrings"
+          ></ul>
         </section>
 
         <section class="main__products--miscelaneous">
           <header class="products__header">
-            <h2 class="products__header--title">Action Figures</h2>
+            <h2 class="products__header--title">
+              <span class="sr-only">Categoria: </span>Action Figures
+            </h2>
+
             <a
               href="./app/screens/products.html"
               target="_blank"
               class="products__header--link"
-              >Ver todos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+              >Ver todos
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
             ></a>
           </header>
 
-          <ul class="products__list loading expanded" data-products="actionFigures"></ul>
+          <ul
+            class="products__list loading expanded"
+            data-products="actionFigures"
+          ></ul>
         </section>
       </div>
     </main>
 
     <aside class="info">
-      <a href="./index.html" class="navigation__link logo" title="Voltar ao Início">
+      <a
+        href="./index.html"
+        class="navigation__link logo"
+        title="Voltar ao Início"
+      >
         <img
           src="./app/assets/images/alura_geek_logo_dark.svg"
           alt=""
