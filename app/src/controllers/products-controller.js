@@ -30,4 +30,14 @@ export const productController = {
       this.renderList(list.dataset.products, option[context]);
     });
   },
+
+  toggleList(evt) {
+    const productContainer = evt.target.parentNode.parentNode.parentNode;
+    console.log(productContainer);
+    const toggleBtn = productContainer.querySelector("[data-element='toggle']");
+    const productsList = productContainer.querySelector("[data-products]");
+
+    productsList.classList.toggle("expanded");
+    toggleBtn.classList.toggle("expanded");
+  },
 };
