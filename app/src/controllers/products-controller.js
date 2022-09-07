@@ -30,4 +30,25 @@ export const productController = {
       this.renderList(list.dataset.products, option[context]);
     });
   },
+
+  toggleList(evt) {
+    const productContainer = evt.target.parentNode.parentNode.parentNode;
+
+    const toggleBtn = productContainer.querySelector("[data-element='toggle']");
+    const toggleStatus = toggleBtn.querySelector("[data-toggle='status']");
+    const productsList = productContainer.querySelector("[data-products]");
+
+    const isExpanded = toggleBtn.classList.contains("expanded")
+
+    if (isExpanded) {
+      toggleStatus.textContent = "Mostrar todos";
+    } else {
+      toggleStatus.textContent = "Ocultar todos";
+    }
+
+    console.log(toggleStatus.textContent);
+
+    productsList.classList.toggle("expanded");
+    toggleBtn.classList.toggle("expanded");
+  }
 };

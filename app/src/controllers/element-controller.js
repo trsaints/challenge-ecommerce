@@ -11,4 +11,10 @@ export const elementController = {
       target.removeChild(target.firstChild);
     }
   },
+
+  getContext(context) {
+    const currContext = document.querySelector("[data-catalog]");
+
+    return currContext.dataset.catalog === context;
+  }
 };

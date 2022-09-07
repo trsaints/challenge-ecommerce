@@ -15,7 +15,7 @@ export class ProductCard {
     };
 
     banner.img.setAttribute("src", path);
-    banner.caption.textContent = caption;
+    banner.caption.innerHTML = `<span class="sr-only">Produto: </span>${caption}`;
 
     figure.appendChild(banner.img);
     figure.appendChild(banner.caption);
@@ -32,10 +32,12 @@ export class ProductCard {
     };
 
     const linkIcon = elementController.generate("i", "fa-solid");
+
     linkIcon.classList.add("fa-up-right-from-square");
     iconController.hideIcon(linkIcon);
 
-    content.price.textContent = `R$ ${price}`;
+    content.price.innerHTML = `<span class="sr-only">Preço: </span>R$ ${price}`;
+
     content.link.textContent = "Ver produto ";
     content.link.appendChild(linkIcon);
     content.link.setAttribute("href", URL);

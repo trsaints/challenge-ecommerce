@@ -43,6 +43,13 @@ textarea {
   max-width: 100%;
 }
 
+.sr-only {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 *::-webkit-scrollbar {
   width: 0.25rem;
 }
