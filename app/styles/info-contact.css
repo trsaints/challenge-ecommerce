@@ -55,6 +55,7 @@
   max-width: 9.4375rem;
 
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .contact__submit:hover,
