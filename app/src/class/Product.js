@@ -2,12 +2,14 @@ export class Product {
   #name;
   #price;
   #image;
+  #description;
   #id;
 
   constructor(product) {
     this.#name = product.name;
     this.#price = product.price;
     this.#image = product.image;
+    this.#description = product.description;
     this.#id = product.id;
   }
 
@@ -21,6 +23,10 @@ export class Product {
 
   get image() {
     return this.#image;
+  }
+
+  get description() {
+    return this.#description;
   }
 
   get id() {
