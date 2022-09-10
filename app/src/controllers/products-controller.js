@@ -2,22 +2,23 @@ import { productsService } from "../services/products-service.js";
 import { ProductCard } from "../model/ProductCard.js";
 import { Context } from "../class/Context.js";
 import { Product } from "../class/Product.js";
+import { elementController } from "./element-controller.js";
 
-export const productController = {
+export const productsController = {
   generateList(products, target) {
     const card = new ProductCard();
 
-    target.classList.remove("loading");
+    elementController.load(target);
     products.forEach((product) => {
       card.render(new Product(product), target);
     });
   },
 
-  renderList(dataset, option) {
-    const listTarget = document.querySelector(`[data-products='${dataset}']`);
+  renderList(context, target) {
+    const category = target.dataset.products;
 
-    productsService.getProducts(dataset, option).then((products) => {
-      this.generateList(products, listTarget);
+    productsService.getProducts(category, context).then((products) => {
+      this.generateList(products, target);
     });
   },
 
@@ -27,7 +28,7 @@ export const productController = {
     const option = new Context("abridged", "full");
 
     listsTargets.forEach((list) => {
-      this.renderList(list.dataset.products, option[context]);
+      this.renderList(option[context], list);
     });
   },
 
@@ -38,7 +39,7 @@ export const productController = {
     const toggleStatus = toggleBtn.querySelector("[data-toggle='status']");
     const productsList = productContainer.querySelector("[data-products]");
 
-    const isExpanded = toggleBtn.classList.contains("expanded")
+    const isExpanded = toggleBtn.classList.contains("expanded");
 
     if (isExpanded) {
       toggleStatus.textContent = "Mostrar todos";
@@ -50,5 +51,5 @@ export const productController = {
 
     productsList.classList.toggle("expanded");
     toggleBtn.classList.toggle("expanded");
-  }
+  },
 };

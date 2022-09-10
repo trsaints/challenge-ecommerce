@@ -1,14 +1,13 @@
 import { elementController } from "../controllers/element-controller.js";
 import { iconController } from "../controllers/icon-controller.js";
 import { Context } from "../class/Context.js";
-
 export class ProductCard {
-  generateBanner(caption, image, context) {
+  #generateBanner(caption, image, context) {
     const entryPoint = new Context("./app/", "../");
     const path = `${entryPoint[context]}assets/images/${image}`;
 
     const figure = elementController.generate("figure", "item__banner");
-    
+
     const banner = {
       img: elementController.generate("img", "item__image"),
       caption: elementController.generate("figcaption", "item__description"),
@@ -23,7 +22,7 @@ export class ProductCard {
     return figure;
   }
 
-  generateContent(price, URL) {
+  #generateContent(price, URL) {
     const frag = document.createDocumentFragment();
 
     const content = {
@@ -48,23 +47,24 @@ export class ProductCard {
     return frag;
   }
 
-  generate(product, context) {
+  #generate(product, context) {
     const productCard = elementController.generate("li", "products__item");
 
     const card = {
-      banner: this.generateBanner(product.name, product.image, context),
-      content: this.generateContent(product.price, "#"),
+      banner: this.#generateBanner(product.name, product.image, context),
+      content: this.#generateContent(product.price, "#product"),
     };
 
     productCard.appendChild(card.banner);
     productCard.appendChild(card.content);
+    productCard.dataset.productId = product.id;
 
     return productCard;
   }
 
   render(product, target) {
     const pageContext = document.querySelector("[data-catalog]");
-    const productCard = this.generate(product, pageContext.dataset.catalog);
+    const productCard = this.#generate(product, pageContext.dataset.catalog);
 
     target.appendChild(productCard);
   }
