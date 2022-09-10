@@ -4,7 +4,7 @@ import { Context } from "../class/Context.js";
 import { Product } from "../class/Product.js";
 import { elementController } from "./element-controller.js";
 
-export const productController = {
+export const productsController = {
   generateList(products, target) {
     const card = new ProductCard();
 
