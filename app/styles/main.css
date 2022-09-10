@@ -3,6 +3,7 @@
 @import url("./header.css");
 @import url("./main-hero.css");
 @import url("./main-products.css");
+@import url("./product-page.css");
 @import url("./info.css");
 @import url("./info-contact.css");
 @import url("./footer.css");
@@ -48,6 +49,10 @@ textarea {
   width: 0;
   height: 0;
   overflow: hidden;
+}
+
+.hidden {
+  display: none;
 }
 
 *::-webkit-scrollbar {
