@@ -1,14 +1,13 @@
 import { elementController } from "../controllers/element-controller.js";
 import { iconController } from "../controllers/icon-controller.js";
 import { Context } from "../class/Context.js";
-
 export class ProductCard {
   #generateBanner(caption, image, context) {
     const entryPoint = new Context("./app/", "../");
     const path = `${entryPoint[context]}assets/images/${image}`;
 
     const figure = elementController.generate("figure", "item__banner");
-    
+
     const banner = {
       img: elementController.generate("img", "item__image"),
       caption: elementController.generate("figcaption", "item__description"),
@@ -53,11 +52,12 @@ export class ProductCard {
 
     const card = {
       banner: this.#generateBanner(product.name, product.image, context),
-      content: this.#generateContent(product.price, "#"),
+      content: this.#generateContent(product.price, "#product"),
     };
 
     productCard.appendChild(card.banner);
     productCard.appendChild(card.content);
+    productCard.dataset.productId = product.id;
 
     return productCard;
   }
