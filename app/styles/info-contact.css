@@ -1,9 +1,4 @@
-.info__contact {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
+.info__contact,
 .contact__fieldset {
   display: flex;
   flex-direction: column;
@@ -16,26 +11,28 @@
 }
 
 .fieldset__section {
+  border-bottom: 0.25rem solid transparent;
+  border-radius: 0.25rem;
   padding: 0.5rem 0.75rem;
+
   background-color: var(--c-white--ds);
   color: var(--c-black--ls);
+
   cursor: pointer;
+
   display: flex;
   flex-direction: column;
-  border-radius: 0.25rem;
-  border-bottom: 0.25rem solid transparent;
 
   transition: all 0.3s ease;
 }
 
 .fieldset__section:focus-within {
   transform: scale(1.02);
+
+  box-shadow: inset 0 0 5px var(--c-gray);
 }
 
-.fieldset__section:focus-within {
-  box-shadow: inset 0 0 5px var(--c-gray);
-  border-bottom-color: var(--c-red);
-}
+.fieldset__section:focus-within,
 .fieldset__section:hover {
   border-bottom-color: var(--c-red);
 }
@@ -46,15 +43,18 @@
 }
 
 .contact__submit {
+  max-width: 9.4375rem;
   padding: 0.75rem 1rem;
+
   background-color: var(--c-red--d);
+  color: var(--c-white--ls);
+
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--c-white--ls);
   text-align: center;
-  max-width: 9.4375rem;
 
   transition: all 0.3s ease;
+  
   cursor: pointer;
 }
 

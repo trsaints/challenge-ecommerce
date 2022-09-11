@@ -1,6 +1,8 @@
 .header {
   background-color: var(--c-black);
+
   padding: 1rem;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,12 +11,15 @@
 
 .header__logo {
   display: inline-block;
+
   min-width: 6.25rem;
+
   order: 1;
 }
 
 .header__label {
   order: 3;
+
   width: 0;
   overflow: hidden;
 
@@ -30,8 +35,9 @@
 
 .header__label.expanded {
   padding: 0.5rem 1rem;
-  background-color: var(--c-white--ds);
   border-radius: 1.25rem;
+
+  background-color: var(--c-white--ds);
 }
 
 .label__icon {
@@ -41,8 +47,9 @@
 
 .header__label:focus-within .label__icon,
 .header__label:hover .label__icon {
-  width: 0%;
   opacity: 0;
+
+  width: 0%;
   overflow: hidden;
 }
 
@@ -56,6 +63,7 @@
 
 .header__search--mobile .label__icon {
   color: var(--c-gray--l);
+
   position: relative;
   right: 0.7rem;
 }
@@ -69,9 +77,11 @@
   color: var(--c-red);
   font-weight: 600;
   font-size: 0.875rem;
+  
   border: 0.125rem solid var(--c-red--d);
   display: inline-block;
   padding: 0.6rem 3rem;
+
   order: 2;
 
   transition: all 0.3s ease;
@@ -94,17 +104,17 @@
 
   .header__label {
     padding: 0.5rem 1rem;
-    background-color: var(--c-white--ds);
     border-radius: 1.25rem;
     width: 100%;
     overflow: visible;
-    padding: 0.5rem 1rem;
     margin-right: calc(8.375rem - var(--header-gap));
-    order: 2;
 
+    background-color: var(--c-white--ds);
+    
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    order: 2;
   }
 
   .header__search--mobile {
