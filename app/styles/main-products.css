@@ -14,11 +14,12 @@
 
 .products__header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-bottom: .25rem;
-  margin-bottom: 2rem;
+  justify-content: space-between;
+
   border-bottom: .125rem solid var(--c-gray--ls);
+  margin-bottom: 2rem;
+  padding-bottom: .25rem;
 }
 
 .products__header--title {
@@ -29,10 +30,13 @@
 .products__header--link {
   font-size: 1rem;
   font-weight: 700;
+
   color: var(--c-black);
+  
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  
   padding: .5rem;
 
   transition: all .3s ease;
@@ -47,7 +51,9 @@
 
 .products__toggle {
   cursor: pointer;
+
   font-size: 1.5rem;
+  
   transition: all .1s ease;
 }
 
@@ -62,6 +68,7 @@
 
   max-height: 0;
   overflow: hidden;
+ 
   transition: max-height .2s ease-out;
 }
 
@@ -79,11 +86,13 @@
 .products__item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 0.75rem;
-  padding: 1rem 0.5rem;
-  background-color: var(--c-white--ls);
+  justify-content: space-between;
+  
   border-radius: 0.25rem;
+  padding: 1rem 0.5rem;
+  
+  background-color: var(--c-white--ls);
   animation: fade-in 0.3s forwards;
   transition: all 0.3s ease-in-out;
 }
@@ -101,15 +110,18 @@
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
+  
   isolation: isolate;
 }
 
 .item__image {
   place-self: center;
-  width: 10.1875rem;
+  
   height: 10.1875rem;
-  object-fit: contain;
   padding: 0.5rem;
+  width: 10.1875rem;
+  
+  object-fit: contain;
 }
 
 .item__description {
@@ -125,11 +137,15 @@
 .item__link {
   font-size: 0.875rem;
   font-weight: 700;
+  
   display: inline-block;
-  padding: .5rem;
-  background-color: var(--c-red--d);
+  
   border-radius: .25rem;
+  padding: .5rem;
+  
+  background-color: var(--c-red--d);
   color: var(--c-white--ls);
+  
   text-decoration: underline;
   text-align: center;
 }
@@ -164,15 +180,16 @@
   }
 
   .item__image {
-    width: 10.8125rem;
     height: 10.8125rem;
+    width: 10.8125rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .main__products {
-    padding: 4rem 9.5rem;
     gap: 4rem;
+    
+    padding: 4rem 9.5rem;
   }
 
   .main__products--geeks,

@@ -20,9 +20,11 @@
 
 .product__close {
   align-self: flex-start;
-  padding: 0.5rem;
-  font-size: 1.25rem;
+  
   border: 0.125rem solid transparent;
+  padding: 0.5rem;
+  
+  font-size: 1.25rem;
   cursor: pointer;
 
   transition: all 0.2s ease;
@@ -37,8 +39,8 @@
 .product__info {
   order: 2;
   display: flex;
-  gap: 0.5rem;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 .product__image {
@@ -75,10 +77,13 @@
 .related__header--link {
   font-size: 1rem;
   font-weight: 700;
+  
   color: var(--c-black);
+  
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  
   padding: 0.5rem;
 
   transition: all 0.3s ease;
@@ -110,6 +115,7 @@
 @media screen and (min-width: 768px) {
   .main__product {
     gap: 3rem;
+    
     padding: 2rem;
   }
 

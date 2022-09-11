@@ -19,12 +19,12 @@
   --c-red: #f03844;
   --c-red--d: #e4111f;
   --c-red--ds: #b40e19;
-  --c-black: #0a090c;
-  --c-black--l: #221f29;
   --c-black--ls: #3a3546;
-  --c-gray: #6d6779;
+  --c-black--l: #221f29;
+  --c-black: #0a090c;
   --c-gray--l: #868093;
   --c-gray--ls: #a09cab;
+  --c-gray: #6d6779;
   --header-gap: 2.1875rem;
 }
 
@@ -46,6 +46,7 @@ textarea {
 
 .sr-only {
   position: absolute;
+  
   width: 0;
   height: 0;
   overflow: hidden;
