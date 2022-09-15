@@ -70,18 +70,26 @@
 }
 
 .login__section--input:valid {
-  border-color: green;
+  border-color: var(--c-green--d);
 }
 
 .login__submit {
-  background-color: var(--c-red);
+  background-color: var(--c-red--d);
   cursor: pointer;
   padding: .75rem 1rem;
   width: 100%;
   max-width: 6.8125rem;
   min-height: 2.5rem;
   font-weight: 500;
+  color: var(--c-white--ls);
   text-align: center;
+  
+  transition: all .2s ease;
+}
+
+.login__submit:hover,
+.login__submit:focus {
+  transform: scale(1.03);
 }
 
 @media screen and (min-width: 1024px) {
@@ -101,7 +109,7 @@
   .login__submit {
     width: 100%;
     max-width: 26.4375rem;
-    min-height: 3.9375rem;
+    padding: 1rem;
   }
 }
 
