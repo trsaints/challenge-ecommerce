@@ -26,6 +26,9 @@
   --c-gray--l: #868093;
   --c-gray--ls: #a09cab;
   --c-gray: #6d6779;
+  --c-green--ds: hsl(150, 100%, 30%);
+  --c-green--d: hsl(150, 100%, 40%);
+  --c-green: #00FF7F;
   --header-gap: 2.1875rem;
 }
 
