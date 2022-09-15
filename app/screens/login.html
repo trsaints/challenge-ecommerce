@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/icons/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../assets/icons/css/brands.min.css" />
+    <link rel="stylesheet" href="../assets/icons/css/solid.min.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../../site.webmanifest" />
+    <title>AluraGeek</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <img
+        class="header__logo"
+        src="../assets/images/alura_geek_logo.svg"
+        alt=""
+      />
+
+      <label class="header__label">
+        <span class="sr-only">Busque um produto: </span>
+        <input
+          class="header__search"
+          type="search"
+          name="search"
+          id=""
+          placeholder="O que deseja encontrar?"
+        />
+
+        <i
+          class="fa-solid fa-magnifying-glass label__icon"
+          aria-hidden="true"
+        ></i>
+      </label>
+
+      <button
+        class="header__search--mobile"
+        type="button"
+        title="Faça sua busca"
+      >
+        <i
+          class="fa-solid fa-magnifying-glass label__icon"
+          aria-hidden="true"
+        ></i>
+      </button>
+    </header>
+
+    <main>
+      <form class="login" data-context="login">
+        <fieldset class="login__fieldset">
+          <legend class="login__legend">Iniciar sessão</legend>
+
+          <div class="login__section">
+            <label class="login__section--label" for="login-email">Email</label>
+
+            <input
+              class="login__section--input"
+              name="email"
+              type="email"
+              id="login-email"
+              required
+            />
+          </div>
+
+          <div class="login__section">
+            <label class="login__section--label" for="login-password"
+              >Senha
+            </label>
+
+            <input
+              class="login__section--input"
+              name="login"
+              type="password"
+              id="login-password"
+              required
+            />
+          </div>
+        </fieldset>
+
+        <input class="login__submit" type="submit" value="Entrar" />
+      </form>
+    </main>
+
+    <aside class="info">
+      <a
+        href="../../index.html"
+        class="navigation__link logo"
+        title="Voltar ao Início"
+      >
+        <img
+          src="../assets/images/alura_geek_logo_dark.svg"
+          alt=""
+          class="info__logo"
+        />
+      </a>
+
+      <nav class="info__navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Quem somos nós</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Política de privacidade</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Programa de fidelidade</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Nossas lojas</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Quero ser franqueado</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Anuncie aqui</a>
+          </li>
+        </ul>
+      </nav>
+
+      <form action="index.html" class="info__contact">
+        <fieldset class="contact__fieldset">
+          <legend class="fieldset__legend">Fale conosco</legend>
+
+          <label class="fieldset__section"
+            >Nome <input type="text" class="section__input"
+          /></label>
+
+          <label class="fieldset__section"
+            >Mensagem
+            <textarea name="message" class="section__textarea"></textarea>
+          </label>
+        </fieldset>
+
+        <input class="contact__submit" type="submit" value="Enviar mensagem" />
+      </form>
+    </aside>
+
+    <footer class="footer">
+      <p>
+        Desenvolvido por
+        <a
+          href="https://github.com/trsaints/challenge-ecommerce/"
+          class="footer__link"
+          >@trsaints</a
+        ><br />
+        2022
+      </p>
+    </footer>
+  </body>
+</html>
