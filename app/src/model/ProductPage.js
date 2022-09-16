@@ -73,11 +73,11 @@ export class ProductPage {
 
   #setCloseEvent(button) {
     const wrapper = document.querySelector("[data-element='product']");
-    const catalog = document.querySelector("[data-catalog]");
+    const context = document.querySelector("[data-context]");
 
     button.addEventListener("click", () => {
       productController.close(wrapper);
-      elementController.show(catalog);
+      elementController.show(context);
     });
   }
 
@@ -113,8 +113,8 @@ export class ProductPage {
   }
 
   render(product, category, target) {
-    const pageContext = document.querySelector("[data-catalog]");
-    const page = this.#generate(product, pageContext.dataset.catalog, category);
+    const pageContext = document.querySelector("[data-context]");
+    const page = this.#generate(product, pageContext.dataset.context, category);
 
     target.appendChild(page);
   }

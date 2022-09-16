@@ -63,8 +63,8 @@ export class ProductCard {
   }
 
   render(product, target) {
-    const pageContext = document.querySelector("[data-catalog]");
-    const productCard = this.#generate(product, pageContext.dataset.catalog);
+    const pageContext = document.querySelector("[data-context]");
+    const productCard = this.#generate(product, pageContext.dataset.context);
 
     target.appendChild(productCard);
   }
