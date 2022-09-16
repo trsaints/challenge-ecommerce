@@ -31,9 +31,9 @@ export const elementController = {
   },
 
   getContext(context) {
-    const currContext = document.querySelector("[data-catalog]");
+    const currContext = document.querySelector("[data-context]");
 
-    return currContext.dataset.catalog === context;
+    return currContext.dataset.context === context;
   },
 
   getData(target, data) {
